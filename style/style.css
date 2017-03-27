@@ -1,0 +1,120 @@
+body {
+	margin: 0;
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+
+}
+
+nav {
+	background-color: #2F4F4F;
+}
+
+nav .wrapper > * {
+	color: #FFF;
+}
+
+.carousel-box {
+	width: 100%;
+	background-color: #888;
+}
+
+.carousel > a > img {
+	height: 100%;
+}
+
+.carousel > a > span,
+.carousel > div > span {
+	display: block;
+	position: absolute;
+	margin: 0 auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 10%;
+	color: #FFF;
+	background-color: rgba(245, 245, 220, 0.6);
+}
+
+.itemActive, .item {
+	display: inline-block;
+	position: absolute;
+	background-color: #eee;
+	margin: auto;
+}
+
+.itemActive {
+	z-index: 3;
+	width: 300px;
+	top: 0;
+	bottom: 0;
+	margin-left: -150px;
+}
+
+.item {
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.item > img {
+	height: 98%;
+	margin: 1% 0;
+}
+
+.nextItemLeft {
+	display: none;
+}
+
+.nextItemRight {
+	display: none;
+}
+
+.carousel .btn {
+	position: relative;
+	z-index: 3;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border: solid 2px #111;
+	border-radius: 40px;
+}
+
+.carousel .btn > img {
+	margin: 10%;
+	height: 80%;
+}
+
+.carousel .btn:hover {
+	background-color: #CCC;
+}
+
+.carousel .btn:active {
+	background-color: transparent;
+}
+
+.scrollLeft {
+	float: left;
+	transform: rotate(180deg);
+}
+
+.scrollRight {
+	float: right;
+}
+
+.carousel {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	padding: 5%;
+	background-color: #333;
+	color: #ddd;
+}
