@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 
-	<script type="text/javascript" href="script/script.js"></script>
+	<script type="text/javascript" src="script/script.js"></script>
 </head>
 <body>
 
@@ -35,38 +35,41 @@
 						2.1. Get the next item from an array
 						2.2. Move items around
 					3. At the end switch classes
+					4. Make it possible to display more/less than 5 images 
 				-->
-				<div class="lastItemLeft">
+				<div class="nextItemLeft item" style="z-index: 0; left: 80%; width: 20%; height: 55%;">
 					
 				</div>
-				<div class="item" style="z-index: 1; right: 70%; height: 80%;">
-					<img src="img/tom1.jpg">
+				<div class="item" style="z-index: 1; right: 65%; width: 25%; height: 70%;">
+					<img src="img/tom1.jpg" alt="" title="0">
 					<span>Lorem ipsum dolor sit amet</span>
 				</div>
-				<div class="item" style="z-index: 2; right: 50%; height: 90%;">
-					<img src="img/khe.jpg">
+				<div class="item" style="z-index: 2; right: 55%; width: 30%; height: 85%;">
+					<img src="img/khe.jpg" alt="" title="1">
 					<span>Lorem ipsum dolor</span>
 				</div>
-				<a class="itemActive" href="#">
-					<img src="img/what.jpg">
-					<span>Who cares?</span>
-				</a>
-				<div class="item" style="z-index: 2; left: 50%; height: 90%;">
-					<img src="img/spurdo.png">
+				<div class="item active">
+					<a href="#">
+						<img src="img/what.jpg" alt="" title="2">
+						<span>Who cares?</span>
+					</a>
+				</div>
+				<div class="item" style="z-index: 2; left: 55%; width: 30%; height: 85%;">
+					<img src="img/spurdo.png" alt="" title="3">
 					<span>Lorem ipsum dolor sit</span>
 				</div>
-				<div class="item" style="z-index: 1; left: 70%; height: 80%;">
-					<img src="img/atlas.png">
+				<div class="item" style="z-index: 1; left: 65%; width: 25%; height: 70%;">
+					<img src="img/atlas.png" alt="" title="4">
 					<span>Lorem ipsum</span>
 				</div>
-				<div class="nextItemRight">
-					
+				<div class="nextItemRight item" style="z-index: 0; left: 80%; width: 20%; height: 55%;">
+
 				</div>
 				
-				<button class="btn scrollLeft">
+				<button class="btn scrollLeft" onclick="imgCarousel.scrollLeft()">
 					<img src="img/carousel_arrow.png">
 				</button>
-				<button class="btn scrollRight">
+				<button class="btn scrollRight" onclick="imgCarousel.scrollRight()">
 					<img src="img/carousel_arrow.png">
 				</button>
 			</div>

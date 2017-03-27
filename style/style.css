@@ -21,12 +21,19 @@ nav .wrapper > * {
 	background-color: #888;
 }
 
-.carousel > a > img {
-	height: 100%;
+.carousel {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	text-align: center;
 }
 
-.carousel > a > span,
-.carousel > div > span {
+/* 
+Carousel's items (images) 
+================
+*/
+.carousel .item span {
 	display: block;
 	position: absolute;
 	margin: 0 auto;
@@ -34,55 +41,75 @@ nav .wrapper > * {
 	left: 0;
 	right: 0;
 	height: 10%;
-	color: #FFF;
+	color: #333;
 	background-color: rgba(245, 245, 220, 0.6);
 }
 
-.itemActive, .item {
+.carousel .item {
 	display: inline-block;
 	position: absolute;
 	background-color: #eee;
-	margin: auto;
-}
-
-.itemActive {
-	z-index: 3;
-	width: 300px;
 	top: 0;
 	bottom: 0;
+	margin: auto;
+	white-space: nowrap;
+}
+
+.carousel .active {
+	z-index: 3;
+	width: 300px;
 	margin-left: -150px;
 }
 
-.item {
-	top: 0;
-	bottom: 0;
-	margin: auto;
+.carousel .item img {
+	display: inline-block;
+	max-width: 100%;
+	max-height: 98%;
+	margin: 1% auto;
+	vertical-align: middle;
 }
 
-.item > img {
-	height: 98%;
-	margin: 1% 0;
+/* 
+Pseudo element vertical aligning technique because image dimensions are unknown (autosize)
+Another way of doing this is using tables...
+*/
+.carousel .item::before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-left: -0.25em;	/* To get rid of the "content: '';" size */
 }
 
-.nextItemLeft {
+.carousel .nextItemLeft {
 	display: none;
 }
 
-.nextItemRight {
+.carousel .nextItemRight {
 	display: none;
 }
+/* 
+================
+*/
+
+/* 
+Carousel's buttons 
+================
+*/
 
 .carousel .btn {
 	position: relative;
 	z-index: 3;
 	width: 50px;
 	height: 50px;
+	top: 50%;
+	margin-top: -25px;
 	background-color: transparent;
 	border: solid 2px #111;
-	border-radius: 40px;
+	border-radius: 40px;	
 }
 
-.carousel .btn > img {
+.carousel .btn img {
 	margin: 10%;
 	height: 80%;
 }
@@ -95,22 +122,17 @@ nav .wrapper > * {
 	background-color: transparent;
 }
 
-.scrollLeft {
+.carousel .scrollLeft {
 	float: left;
 	transform: rotate(180deg);
 }
 
-.scrollRight {
+.carousel .scrollRight {
 	float: right;
 }
-
-.carousel {
-	position: relative;
-	width: 100%;
-	height: 300px;
-	overflow: hidden;
-	text-align: center;
-}
+/*  
+================
+*/
 
 footer {
 	text-align: center;
